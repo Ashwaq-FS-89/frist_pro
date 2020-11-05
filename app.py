@@ -168,7 +168,7 @@ def create_venue_submission():
    flash('Venue ' + request.form['name'] + ' was successfully listed!')
   except:
     error=False
-    flash('An error occurred. Venue ' + data.name + ' could not be listed.')
+    flash('An error occurred. Venue ' + request.form['name']+ ' could not be listed.')
   
   return render_template('pages/home.html')
 
@@ -377,7 +377,7 @@ def create_artist_submission():
    flash('Artist ' + request.form['name'] + ' was successfully listed!')
   except:
    error=True
-   flash('An error occurred. Artist ' + data.name + ' could not be listed.')
+   flash('An error occurred. Artist ' + request.form['name'] + ' could not be listed.')
 
   return render_template('pages/home.html')
 
